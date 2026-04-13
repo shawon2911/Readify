@@ -6,7 +6,7 @@ const BookDetails = () => {
   const { id } = useParams();
   // console.log(id);
   const books = useLoaderData();
-  console.log(books);
+  // console.log(books);
   const targetBook = books.find((book) => book.bookId == id);
   const {
     bookId,

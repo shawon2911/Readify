@@ -1,14 +1,20 @@
 
 import { useContext } from 'react';
-import BookCard from '../HomePage/BookCard';
+
 import ListedBookCard from './ListedBookCard';
 import { BookContext } from '../../Context/BooksProvider';
 
-const ReadList = ({allBooks}) => {
+const ReadList = () => {
     const { readListBooks } = useContext(BookContext);
+    // console.log(readListBooks, "read");
+     
     return (
         <div className='max-w-7xl mx-auto'>
-            <ListedBookCard allBooks={allBooks}></ListedBookCard>
+            {
+                readListBooks.map(selectedBook => (
+                    <ListedBookCard key={selectedBook.bookId} selectedBook={selectedBook}></ListedBookCard>
+                ))
+            }
         </div>
     );
 };

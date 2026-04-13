@@ -24,10 +24,10 @@ const Books = () => {
         </TabList>
 
         <TabPanel>
-          <ReadList allBooks={allBooks}></ReadList>
+          <ReadList ></ReadList>
         </TabPanel>
         <TabPanel>
-          <WishList allBooks={allBooks}></WishList>
+          <WishList ></WishList>
         </TabPanel>
       </Tabs>
 
