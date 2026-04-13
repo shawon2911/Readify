@@ -17,9 +17,9 @@ const ListedBookCard = ({ selectedBook}) => {
     <div className="max-w-7xl mx-auto">
       <div className="">
         
-          <div  className="grid grid-cols-3 border border-gray-300 my-8 rounded-2xl shadow-sm ">
-            <figure className="col-span-1 flex justify-center items-center bg-base-200 rounded-2xl my-5 mx-5">
-              <img src={selectedBook.image} className="h-50 " />
+          <div  className="grid grid-cols-1 md:grid-cols-3 border border-gray-300 my-12 md:my-8 mx-2 md:mx-0  rounded-2xl shadow-sm ">
+            <figure className="col-span-1 flex justify-center items-center bg-base-200 rounded-2xl my-5 mx-5 py-5 md:py-0">
+              <img src={selectedBook.image} className="h-40 md:h-50 " />
             </figure>
             <div className="card-body col-span-2 space-y-3">
               <h2 className="card-title font-bold text-[24px] text-black">
@@ -39,7 +39,7 @@ const ListedBookCard = ({ selectedBook}) => {
                   </div>
                 ))}
               </div>
-              <div className="text-[16px] text-[#131313]/60 flex justify-start items-center gap-5 border-b pb-5 border-gray-300">
+              <div className="text-[16px] text-[#131313]/60 flex flex-col md:flex-row  md:justify-start md:items-center  gap-5 border-b pb-5 border-gray-300">
                 <div className="flex justify-start items-center gap-3">
                     <FaUserFriends/>
                     <h3>Publisher : {selectedBook.publisher}</h3>
@@ -49,9 +49,11 @@ const ListedBookCard = ({ selectedBook}) => {
                     <h3>Page : {selectedBook.totalPages}</h3>
                 </div>
               </div>
-              <div className="flex items-center gap-5">
-                <h3 className="bg-[#328EFF]/15 py-2 px-5 rounded-full text-[#328EFF]">Category : {selectedBook.category}</h3>
-                <h3 className="bg-[#FFAC33]/15 py-2 px-5 rounded-full text-[#FFAC33]">Category : {selectedBook.category}</h3>
+              <div className="flex flex-col md:flex-row md:items-center gap-5">
+                <div className="flex items-center gap-5">
+                  <h3 className="bg-[#328EFF]/15 py-2 px-5  rounded-full text-[#328EFF]">Category : {selectedBook.category}</h3>
+                  <h3 className="bg-[#FFAC33]/15 py-2 px-6  rounded-full text-[#FFAC33]">Rating : {selectedBook.rating}</h3>
+                </div>
                 <button className="btn bg-[#23BE0A] py-2 px-5 text-white rounded-full">View Details</button>
               </div>
             </div>

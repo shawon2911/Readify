@@ -32,9 +32,9 @@ const BookDetails = () => {
 
 
   return (
-    <div className="grid grid-cols-2 bg-base-100 shadow-sm max-w-7xl mx-auto my-5">
-      <figure className="flex justify-center items-center bg-[#131313]/5">
-        <img src={image} className="max-h-150  " />
+    <div className="grid grid-cols-1 md:grid-cols-2 bg-base-100 shadow-sm max-w-7xl mx-auto my-5">
+      <figure className="flex justify-center items-center bg-[#131313]/5 py-10 md:py-0">
+        <img src={image} className="max-h-80 md:max-h-150 " />
       </figure>
       <div className="card-body ">
         <h2 className="card-title font-bold text-[40px]">{bookName}</h2>
