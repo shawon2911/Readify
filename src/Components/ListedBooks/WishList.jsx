@@ -3,9 +3,9 @@ import ListedBookCard from './ListedBookCard';
 import { BookContext } from '../../Context/BooksProvider';
 
 const WishList = ({sortingType}) => {
-    const{wishListBooks} = useContext(BookContext);
+    const{wishListBooks = [] } = useContext(BookContext);
     // console.log(wishListBooks, "wish");
-    let filteredWishList = wishListBooks;
+    let filteredWishList = [...wishListBooks];
 
 
     if(sortingType === "pages"){
